@@ -9,4 +9,6 @@ Windows:
 
 Please ensure that you have the correct interpreter selected in your IDE. You should use the one that was installed in your virtual environment.
 
+To add a speaker, drop a short WAV for your speaker in `speakers/`, then add an entry to the `speakers` list in `main.py`. Make sure to add "speaker:" before the title of your wav file.
+
 Includes and modifies elements of https://github.com/DougDougGithub/TwitchPlays
