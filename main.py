@@ -12,7 +12,7 @@ class Talk:
         n = speaker.split("speaker:", 1)[1]
 
         if speaker in speakers:
-            speaker_wav = f"C:/dev/twitch/speakers/{n}.wav"
+            speaker_wav = f"C:/dev/twitch-tts/speakers/{n}.wav"
 
         timestamp = str(datetime.now().strftime(f'%Y-%m-%d_%H-%M-%S-%f'))
         output_path = f"output/{n}_{timestamp}.wav"
