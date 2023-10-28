@@ -8,7 +8,7 @@ from TTS.api import TTS
 
 current_dir = os.getcwd()
 class Talk:
-    def generate(text_to_speak, speaker: str = "speaker:kaelin"):
+    def generate(text_to_speak, speaker: str = "speaker:bernie"):
         n = speaker.split("speaker:", 1)[1]
 
         if speaker in speakers:
@@ -36,7 +36,7 @@ class Talk:
         # TO-DO: Still goes out of order sometimes; fix
         if tts_queue != []:
             file_path = tts_queue[0]
-            playsound(file_path)
+            playsound(file_path, block=True)
             tts_queue.remove(tts_queue[0])
 
 # THIS IS FOR MY PERSONAL USE ON WINDOWS. COMMENT THIS OUT IF YOU ARE NOT RUNNING A VIRTUAL ENVIRONMENT ON WINDOWS
