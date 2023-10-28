@@ -39,6 +39,7 @@ class Talk:
             playsound(file_path)
             tts_queue.remove(tts_queue[0])
 
+# THIS IS FOR MY PERSONAL USE ON WINDOWS. COMMENT THIS OUT IF YOU ARE NOT RUNNING A VIRTUAL ENVIRONMENT ON WINDOWS
 subprocess.run(r"python venv/Scripts/activate")
 
 # Initialize list of speakers. Speaker list must match file name of speaker WAVs, but in the format of "speaker:{wav_file_name}"
