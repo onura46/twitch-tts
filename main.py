@@ -17,7 +17,9 @@ class Talk:
 
         timestamp = str(datetime.now().strftime(f'%Y-%m-%d_%H-%M-%S-%f'))
         output_path = f"output/{n}_{timestamp}.wav"
-        # text_to_speak = re.sub('[^A-Za-z0-9 ]+', '', text_to_speak)
+
+        
+        # text_to_speak = re.sub('[^A-Za-z0-9 ]+', '', text_to_speak) # Uncomment this line if your model is not properly filtering out special characters. This regex will filter them.
 
         # Run TTS
         # ❗ Since this model is multi-lingual voice cloning model, we must set the target speaker_wav and language
