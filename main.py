@@ -1,5 +1,6 @@
 from dougdoug.TwitchPlays_TTS_READER import *
 import subprocess
+import re
 from datetime import datetime
 from playsound import playsound
 import torch
@@ -16,6 +17,7 @@ class Talk:
 
         timestamp = str(datetime.now().strftime(f'%Y-%m-%d_%H-%M-%S-%f'))
         output_path = f"output/{n}_{timestamp}.wav"
+        # text_to_speak = re.sub('[^A-Za-z0-9 ]+', '', text_to_speak)
 
         # Run TTS
         # ❗ Since this model is multi-lingual voice cloning model, we must set the target speaker_wav and language
@@ -49,7 +51,11 @@ speakers = ["speaker:kaelin", "speaker:bernie", "speaker:vader"]
 tts_queue = []
 
 # Get device
-device = "cuda" if torch.cuda.is_available() else "cpu"
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 # Initialize TTS
-tts = TTS("tts_models/multilingual/multi-dataset/xtts_v1", progress_bar=True).to(device)
+# tts_models/en/ljspeech/glow-tts - Works well; fast-ish; no numerals
+# tts_models/en/ljspeech/tacotron2-DDC - Works well; fast-ish; no numerals; speech not as good
+# tts_models/multilingual/multi-dataset/your_tts - Works well; fast-ish; no numerals
+# tts_models/multilingual/multi-dataset/xtts_v1 - Works poorly; best hybrid synthesis; needs fix for tensor dimensions
+tts = TTS("tts_models/multilingual/multi-dataset/your_tts", progress_bar=True).to(device)
