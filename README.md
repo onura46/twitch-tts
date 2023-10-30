@@ -9,7 +9,7 @@ It's recommended to run all this from a virtual environment. Here are directions
 Windows:
 1. Download this entire repo or `git clone` it into an empty directory.
 2. Run a command prompt from this folder. Set up a virtual environment: `python -m venv venv`
-3. Activate the virtual environment. NOTE: This step is included in main.py and should be altered or removed if your environment path is named something else. `.\venv\Scripts\activate` or `python venv\Scripts\activate`
+3. Activate the virtual environment: `.\venv\Scripts\activate` or `python venv\Scripts\activate`
 4. Install packages from requirements: `pip install -r requirements.txt`
 5. Run `main.py` from your IDE, or use `python main.py` from a command line.
 

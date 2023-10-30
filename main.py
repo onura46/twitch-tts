@@ -1,5 +1,4 @@
 from dougdoug.TwitchPlays_TTS_READER import *
-import subprocess
 import re
 from datetime import datetime
 from playsound import playsound
@@ -41,9 +40,6 @@ class Talk:
             file_path = tts_queue[0]
             playsound(file_path, block=True)
             tts_queue.remove(tts_queue[0])
-
-# THIS IS FOR MY PERSONAL USE ON WINDOWS. COMMENT THIS OUT IF YOU ARE NOT RUNNING A VIRTUAL ENVIRONMENT ON WINDOWS
-subprocess.run(r"python venv/Scripts/activate")
 
 # Initialize list of speakers. Speaker list must match file name of speaker WAVs, but in the format of "speaker:{wav_file_name}"
 speakers = ["speaker:kaelin", "speaker:bernie", "speaker:vader"]
