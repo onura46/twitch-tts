@@ -24,3 +24,7 @@ This script uses Coqui-TTS models for speech synthesis: https://github.com/coqui
 Includes and modifies elements of https://github.com/DougDougGithub/TwitchPlays
 
 Please see the included LICENSE for details on all other files.
+
+## Issues
+
+This repository is uploaded mostly for demonstration purposes and personal use, but pull requests and issues are welcome. Please give me some time to respond.
