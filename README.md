@@ -11,6 +11,7 @@ Windows:
 2. Run a command prompt from this folder. Set up a virtual environment: `python -m venv venv`
 3. Activate the virtual environment. NOTE: This step is included in main.py and should be altered or removed if your environment path is named something else. `.\venv\Scripts\activate` or `python venv\Scripts\activate`
 4. Install packages from requirements: `pip install -r requirements.txt`
+5. Run `main.py` from your IDE, or use `python main.py` from a command line.
 
 Please ensure that you have the correct interpreter selected in your IDE. You should use the one that was installed in your virtual environment.
 
