@@ -36,7 +36,7 @@ class Talk:
             Talk.generate(speech)
 
     def render():
-        # TO-DO: Still goes out of order sometimes; fix
+        # TO-DO: Still goes out of order sometimes due to the way TTS_READER queues messages
         if tts_queue != []:
             file_path = tts_queue[0]
             playsound(file_path, block=True)
@@ -57,6 +57,6 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 # Initialize TTS
 # tts_models/en/ljspeech/glow-tts - Works well; fast-ish; no numerals
 # tts_models/en/ljspeech/tacotron2-DDC - Works well; fast-ish; no numerals; speech not as good
-# tts_models/multilingual/multi-dataset/your_tts - Works well; fast-ish; no numerals
+# tts_models/multilingual/multi-dataset/your_tts - Works well; fast-ish; no numerals; fastest model that can do voice cloning
 # tts_models/multilingual/multi-dataset/xtts_v1 - Works poorly; best hybrid synthesis; needs fix for tensor dimensions
 tts = TTS("tts_models/multilingual/multi-dataset/your_tts", progress_bar=True).to(device)

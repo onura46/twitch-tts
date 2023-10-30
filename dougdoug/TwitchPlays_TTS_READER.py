@@ -18,7 +18,7 @@ import TwitchPlays_Connection
 ##################### GAME VARIABLES #####################
 
 # Replace this with your Twitch username. Must be all lowercase.
-TWITCH_CHANNEL = 'zerotepmusic' 
+TWITCH_CHANNEL = 'zerotepmusic'
 
 # If streaming on Youtube, set this to False
 STREAMING_ON_TWITCH = True
@@ -161,8 +161,8 @@ class ChatReader:
                 last_time = time.time();
 
         # If user presses Shift+Backspace, automatically end the program
-        if keyboard.is_pressed('shift+backspace'):
-            exit()
+        # if keyboard.is_pressed('shift+backspace'):
+        #     exit()
 
         if not messages_to_handle:
             pass
